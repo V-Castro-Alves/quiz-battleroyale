@@ -1,0 +1,134 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #3f87a6, #ebf8e1);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container for centering */
+.container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* Card container */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Screens */
+.screen {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Timer */
+.timer-container {
+  margin: 20px 0;
+}
+
+.timer-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timer {
+  font-size: 24px;
+  color: #ff5722;
+}
+
+/* Question */
+.question {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options button {
+  background-color: #2196f3;
+}
+
+.options button:hover {
+  background-color: #1976d2;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .card {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}

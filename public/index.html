@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Royale</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <img src="image/quiz-royale-logo.png" alt="Quiz Royale Logo" class="logo" />
+
+        <!-- Login Screen -->
+        <div id="login" class="screen active">
+            <h1>Welcome to Quiz Royale</h1>
+            <div class="card">
+                <input type="text" id="playerName" placeholder="Enter your name" />
+                <button id="joinBtn">Join Game</button>
+            </div>
+            <div class="card">
+                <input type="password" id="adminKey" placeholder="Admin key" />
+                <button id="adminBtn">Login as Admin</button>
+            </div>
+        </div>
+
+        <!-- Waiting Screen -->
+        <div id="waiting" class="screen">
+            <h1>Waiting for Game to Start</h1>
+            <p id="waitingMessage">Please wait for the admin to start the game...</p>
+            <p>Players Joined: <span id="playerCount">0</span></p>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game" class="screen">
+            <h1>Quiz Royale</h1>
+            <p>Round: <span id="roundNumber">1</span></p>
+            <p>Your Opponent: <span id="opponentName"></span></p>
+            <div class="timer-container">
+                <div class="timer-label">Time remaining:</div>
+                <div class="timer" id="questionTimer">30</div>
+            </div>
+            <div class="question" id="questionText"></div>
+            <div class="options" id="optionsContainer"></div>
+            <button id="submitAnswer" disabled>Submit Answer</button>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result" class="screen">
+            <h1>Round Result</h1>
+            <p id="resultMessage"></p>
+            <p>Correct Answer: <span id="correctAnswer"></span></p>
+            <p>Your Answer: <span id="yourAnswer"></span></p>
+            <p>Opponent's Answer: <span id="opponentAnswer"></span></p>
+            <div id="waitingNext">Waiting for next round...</div>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="admin" class="screen">
+            <h1>Admin Panel</h1>
+            <p>Game Status: <span id="gameStatus">Waiting</span></p>
+            <button id="startGameBtn">Start Game</button>
+            <button id="resetGameBtn">Reset Game</button>
+
+            <h2>Players</h2>
+            <ul id="playerList"></ul>
+
+            <h2>Active Matches</h2>
+            <div id="activeMatches"></div>
+        </div>
+    </div>
+
+    <script src="js/tournament.js"></script>
+</body>
+
+</html>
