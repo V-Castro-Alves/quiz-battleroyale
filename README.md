@@ -2,7 +2,8 @@
 
 ## TODO
 
-- [ ] Adicionar acessar o jogo por QRCode 
+- [ ] Adicionar acessar o jogo por QRCode
+- [ ] Adicionar ngrok (com login e senha simples) para os usuários acessarem 
 - [ ] Adicionar as perguntas do tema
 - [ ] Criar lógica de todos os jogos simultâneos terem as mesmas perguntas
 - [ ] Criar lógica para mostrar a pergunta na tela principal
